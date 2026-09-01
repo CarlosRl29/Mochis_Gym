@@ -22,7 +22,7 @@
 
   --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.45);
-  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.578);
   --shadow-red: 0 8px 32px rgba(239, 0, 31, 0.35);
   --shadow-red-soft: 0 0 40px rgba(239, 0, 31, 0.15);
 
@@ -311,8 +311,8 @@ p {
 }
 
 /* ==========================================================================
-   5. Header
-   ========================================================================== */
+  5. Header
+  ========================================================================== */
 .header {
   position: fixed;
   top: 0;
@@ -616,7 +616,7 @@ p {
 }
 
 /* ==========================================================================
-   7. Beneficios
+  7. Beneficios
    ========================================================================== */
 .beneficios {
   background:
@@ -1912,4 +1912,65 @@ p {
   .horarios__status-dot {
     animation: none;
   }
+}
+
+/* ==========================================================
+  PROTECCIÓN GLOBAL RESPONSIVE
+   ========================================================== */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+section,
+.container,
+header,
+footer,
+main {
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* Elementos multimedia */
+img,
+video,
+iframe,
+svg {
+  max-width: 100%;
+}
+
+/* Hijos de flex y grid pueden encogerse */
+.flex,
+.grid,
+[class*="__grid"],
+[class*="__actions"],
+[class*="__content"],
+[class*="__info"],
+[class*="__card"] {
+  min-width: 0;
+}
+
+/* Botones */
+.btn {
+  max-width: 100%;
+  min-width: 0;
+
+  white-space: normal;
+  overflow-wrap: break-word;
+
+  text-align: center;
+}
+
+/* Textos largos */
+p,
+a,
+span,
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
 }
